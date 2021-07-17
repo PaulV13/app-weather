@@ -1,0 +1,253 @@
+
+.background{
+  background-blend-mode: overlay;
+}
+.cleanSky{
+  background: rgba(255, 255, 255, 0.5) url("../assets/cleansky.webp") center / cover no-repeat;
+}
+.fewClouds{
+  background: rgba(255, 255, 255, 0.5) url("../assets/fewclouds.jpg") center / cover no-repeat;
+}
+.brokenCloud{
+  background: rgba(255, 255, 255, 0.5) url("../assets/brokenclouds.jpg") center / cover no-repeat;
+}
+.mist{
+  background: rgba(255, 255, 255, 0.5) url("../assets/mist.jpg") center / cover no-repeat;
+}
+.rain{
+  background: rgba(255, 255, 255, 0.5) url("../assets/rain.jpg") center / cover no-repeat;
+}
+.thunderstorm{
+  background: rgba(255, 255, 255, 0.5) url("../assets/thunderstorm.jpg") center / cover no-repeat;
+}
+.snow{
+  background: rgba(255, 255, 255, 0.5) url("../assets/snow.jpg") center / cover no-repeat;
+}
+.showerRain{
+  background: rgba(255, 255, 255, 0.5) url("../assets/showerrain.jpg") center / cover no-repeat;
+}
+.scatteredCloud{
+  background: rgba(255, 255, 255, 0.5) url("../assets/scatteredclouds.jpg") center / cover no-repeat;
+}
+
+.loading{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.loading img{
+  height: 64px;
+  width: 64px;
+}
+
+
+.App{
+  background: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 0px 0px;
+  width: 500px;
+}
+
+.data-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px 0px;
+  width: 50%;
+}
+
+.section-title{
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0px 2% 0;
+  padding: 2% 5%;
+}
+
+.title h2{
+  margin: 0px;
+}
+
+.title h4{
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.temperature{
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0px 0px 0px;
+}
+
+.temp{
+  align-items: center;
+  display: flex;
+}
+
+.temp p{
+  font-size: 1.875rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.feels_like{
+  align-items: flex-end;
+  border-radius:6px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  padding: 2%;
+}
+
+.feels_like span{
+  margin: 0 2px;
+}
+
+.feels_like p{
+  margin: 0px 0px 0px 0px;
+}
+
+.tempMaxMin{
+  align-items: center;
+  display: flex;
+  flex-direction:row;
+}
+
+.sevenDays{
+  background: #023E8A;
+  border-radius: 6px;
+  display: flex;
+  flex-direction:column;
+  margin: 2% 0px;
+  padding: 2% 5%;
+}
+
+.sevenDay-temp{
+  align-items: center;
+  display: flex;
+  height: 42px;
+  margin-bottom: 10px;
+}
+
+.sevenDay-day{
+  align-items: center;
+  display: flex;
+  height: 42px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.sevenDays-item{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sevenDays-item p{
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.sevenDays-item span{
+  font-weight: 700;
+}
+
+.humidity-sunset-sunrise{
+  align-items: center;
+  background: #023E8A;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% 0px;
+  padding: 2% 5%;
+}
+
+.humidity-sunset-sunrise p{
+  color: rgb(247 247 247);
+  flex: 1;
+  font-size: 0.875rem;
+  margin: 0 5% 0 0;
+}
+
+.humidity-sunset-sunrise span{
+  color: black;
+  flex: 1;
+  font-weight: 500;
+}
+
+.humidity-sunset-sunrise-item{
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.icon-img{
+  height: 42px;
+  width: 42px;
+}
+
+.error{
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 50%;
+  justify-content: center;
+}
+
+@media (max-width: 470px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px 50px 0px;
+    width: 80%;
+  }
+
+  .title h2 {
+    font-size: 1rem;
+    margin: 0px;
+  }
+
+  .humidity-sunset-sunrise {
+    flex-direction: column;
+  }
+
+  .humidity-sunset-sunrise-item{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .humidity-sunset-sunrise p {
+    color: rgb(247 247 247);
+    flex: 0;
+    font-size: 14px;
+    margin: 0 5% 0 0;
+  }
+
+  .humidity-sunset-sunrise span {
+    color: black;
+    flex: 0;
+    font-weight: 500;
+  }
+
+}
