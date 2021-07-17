@@ -37,7 +37,6 @@ function App() {
     setLoading(true);
 
     const { lat, lon, name, country, cod, message } = await getData(citySearch);
-    const dataDaily = await getSevenDailys(lat, lon);
 
     if (cod === "404") {
       setError(message);
@@ -45,6 +44,7 @@ function App() {
       setWeatherIcon("");
       setLoading(false);
     } else {
+      const dataDaily = await getSevenDailys(lat, lon);
       setError("");
       setCity(name);
       setCountry(country);
