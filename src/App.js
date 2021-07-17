@@ -31,7 +31,7 @@ function App() {
   const [error, setError] = useState("");
   const [humidity, setHumidity] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [, setDisabled] = useState(true);
+  const [isDisabled, setDisabled] = useState(true);
 
   const handleSubmit = useCallback(async ({ citySearch, setCitySearch }) => {
     setLoading(true);
@@ -69,7 +69,11 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Form onSubmit={handleSubmit} />
+        <Form
+          onSubmit={handleSubmit}
+          setDisabled={setDisabled}
+          isDisabled={isDisabled}
+        />
         {loading ? (
           <div className="loading">
             <img src={loadingSvg} alt="" />

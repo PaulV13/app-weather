@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 import "./Form.css";
 
-const Form = ({ onSubmit }) => {
+const Form = ({ onSubmit, isDisabled, setDisabled }) => {
   const [citySearch, setCitySearch] = useState("");
-  const [isDisabled, setDisabled] = useState(true);
 
   const handleChange = (e) => {
     if (e.target.value === "") {
