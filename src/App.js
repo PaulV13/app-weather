@@ -134,17 +134,17 @@ function App() {
               })}
             </div>
             <div className="humidity-sunset-sunrise">
-              <div className="humidity-sunset-sunrise-item">
+              <div className="humidity-sunset-sunrise-item humidity">
                 <img className="icon-img" src={iconHumidity} alt="" />
                 <p>Humidity</p>
                 <span>{humidity}%</span>
               </div>
-              <div className="humidity-sunset-sunrise-item">
+              <div className="humidity-sunset-sunrise-item sunrise">
                 <img className="icon-img" src={iconSunrise} alt="" />
                 <p>Sunrise</p>
                 <span>{sunriseHour}</span>
               </div>
-              <div className="humidity-sunset-sunrise-item">
+              <div className="humidity-sunset-sunrise-item sunset">
                 <img className="icon-img" src={iconSunset} alt="" />
                 <p>Sunset</p>
                 <span>{sunsetHour}</span>
