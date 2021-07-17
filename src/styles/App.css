@@ -142,6 +142,7 @@
   height: 42px;
   margin-bottom: 10px;
   width: 70px;
+  justify-content: flex-end;
 }
 
 .sevenDay-day{
