@@ -246,6 +246,14 @@
     width: 100%;
   }
 
+  .humidity{
+  margin-right: 0;
+}
+
+.sunset{
+  margin-left: 0;
+}
+
   .humidity-sunset-sunrise p {
     color: rgb(247 247 247);
     flex: 0;
