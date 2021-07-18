@@ -4,7 +4,6 @@ const getSevenDailys = async (latitude, longitude) => {
     {
       method: "GET",
       headers: {
-        "access-control-allow-origin": "*",
         "Content-type": "application/json; charset=UTF-8",
       },
     }
