@@ -4,7 +4,6 @@ const getData = async (city) => {
     {
       method: "GET",
       headers: {
-        "access-control-allow-origin": "*",
         "Content-type": "application/json; charset=UTF-8",
       },
     }
