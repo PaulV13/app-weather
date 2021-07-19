@@ -91,7 +91,7 @@ function App() {
                 <div className="temp">
                   <img
                     className="temp-img"
-                    src={`https://openweathermap.org/img/w/${weatherIcon}.png`}
+                    src={`http://openweathermap.org/img/w/${weatherIcon}.png`}
                     alt=""
                   />
                   <p>{temp}°</p>
@@ -120,7 +120,7 @@ function App() {
                     <div className="sevenDay-img">
                       <img
                         className="icon-img"
-                        src={`https://openweathermap.org/img/w/${daily.icon}.png`}
+                        src={`http://openweathermap.org/img/w/${daily.icon}.png`}
                         alt=""
                       />
                     </div>
