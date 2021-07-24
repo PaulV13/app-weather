@@ -91,7 +91,7 @@ function App() {
                 <div className="temp">
                   <img
                     className="temp-img"
-                    src={`http://openweathermap.org/img/w/${weatherIcon}.png`}
+                    src={`https://openweathermap.org/img/w/${weatherIcon}.png`}
                     alt=""
                   />
                   <p>{temp}°</p>
