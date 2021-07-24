@@ -120,7 +120,7 @@ function App() {
                     <div className="sevenDay-img">
                       <img
                         className="icon-img"
-                        src={`http://openweathermap.org/img/w/${daily.icon}.png`}
+                        src={`https://openweathermap.org/img/w/${daily.icon}.png`}
                         alt=""
                       />
                     </div>
