@@ -27,14 +27,14 @@ const Form = ({ onSubmit, isDisabled, setDisabled }) => {
         name="city"
         value={citySearch}
         onChange={handleChange}
-        placeholder="Ciudad..."
+        placeholder="City..."
       ></input>
       <button
         className={isDisabled ? "" : "btn-submit"}
         type="submit"
         disabled={isDisabled}
       >
-        Buscar
+        Search
       </button>
     </form>
   );
