@@ -28,7 +28,6 @@ interface DailyType {
 }
 
 const getWeekendDays = (dailys: DailyType[]) => {
-  console.log(dailys)
   const dias = dailys.map((daily, index) => {
     const date = new Date(daily.dt * 1000);
     const dia = format(date, "EEEE");
