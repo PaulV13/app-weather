@@ -1,6 +1,6 @@
 import format from "date-fns/format";
 
-const getHour = (dt, timezone) => {
+const getHour = (dt:number, timezone:string) => {
   const date = new Date(dt * 1000);
   const datecustom = date.toLocaleString("us-US", {
     timeZone: `${timezone}`,

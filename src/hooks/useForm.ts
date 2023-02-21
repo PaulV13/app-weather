@@ -1,9 +1,16 @@
 import { useState } from "react";
-import { getData } from "../services/getData";
-import { getSevenDailys } from "../services/getSevenDailys";
+import getData  from "../services/getData";
+import getSevenDailys from "../services/getSevenDailys";
 import getDate from "../services/getDate";
 import getHour from "../services/getHour";
 import getWeekendDays from "../services/getWeekendDays";
+
+interface DaysType {
+  day: string;
+  max: number;
+  min: number;
+  icon: string,
+}
 
 const useForm = () => {
   const [citySearch, setCitySearch] = useState("");
@@ -17,22 +24,25 @@ const useForm = () => {
   const [sunsetHour, setSunset] = useState("");
   const [sunriseHour, setSunrise] = useState("");
   const [currentDate, setDate] = useState("");
-  const [days, setDays] = useState([]);
+  const [days, setDays] = useState<DaysType[]>([]);
   const [error, setError] = useState("");
   const [humidity, setHumidity] = useState(0);
   const [loading, setLoading] = useState(false);
   const [, setDisabled] = useState(true);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCitySearch(e.target.value)
+  }
 
+  const handleSubmit = async (citySearch:string) => {
+    setLoading(true);
+    
     const { lat, lon, name, country, cod, message } = await getData(citySearch);
     const dataDaily = await getSevenDailys(lat, lon);
 
     if (cod === "404") {
       setError(message);
-      setTemperature("");
+      setTemperature(0);
       setWeatherIcon("");
       setLoading(false);
     } else {
@@ -61,6 +71,7 @@ const useForm = () => {
     tempMax,
     feelsLike,
     weatherIcon,
+    citySearch,
     city,
     country,
     sunsetHour,
@@ -71,6 +82,7 @@ const useForm = () => {
     humidity,
     loading,
     handleSubmit,
+    handleChange
   };
 };
 

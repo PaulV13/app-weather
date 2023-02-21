@@ -1,6 +1,6 @@
-const getData = async (city) => {
+const getData = async (citySearch:string) => {
   const res = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=es&appid=53795c15e653dce29e9352f6e92119f1`
+    `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&units=metric&lang=es&appid=53795c15e653dce29e9352f6e92119f1`
   );
   const data = await res.json();
   const { cod, message } = data;

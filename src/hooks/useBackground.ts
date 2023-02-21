@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useBackground({ weatherIcon }) {
+export default function useBackground(weatherIcon:string) {
   const [backgroundClassName, setBackgroundClassName] = useState("");
 
   useEffect(() => {
