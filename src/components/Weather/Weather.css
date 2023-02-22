@@ -1,0 +1,108 @@
+.background {
+  background-blend-mode: overlay;
+}
+
+.cleanSky {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/cleansky.webp") center / cover no-repeat;
+}
+
+.fewClouds {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/fewclouds.jpg") center / cover no-repeat;
+}
+
+.brokenCloud {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/brokenclouds.jpg") center / cover no-repeat;
+}
+
+.mist {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/mist.jpg") center / cover no-repeat;
+}
+
+.rain {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/rain.jpg") center / cover no-repeat;
+}
+
+.thunderstorm {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/thunderstorm.jpg") center / cover no-repeat;
+}
+
+.snow {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/snow.jpg") center / cover no-repeat;
+}
+
+.showerRain {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/showerrain.jpg") center / cover no-repeat;
+}
+
+.scatteredCloud {
+  background: rgba(255, 255, 255, 0.5) url("../../assets/scatteredclouds.jpg") center / cover no-repeat;
+}
+
+.weather-section {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title h4 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-temperature {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0px 0px 0px;
+}
+
+.weather-temp {
+  align-items: center;
+  display: flex;
+}
+
+.weather-temp p {
+  font-size: 1.875rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.feels_like {
+  align-items: flex-end;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  padding: 2%;
+}
+
+.feels_like span {
+  margin: 0 2px;
+}
+
+.feels_like p {
+  margin: 0px 0px 0px 0px;
+}
+
+.tempMaxMin {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 470px) {
+  .title h2 {
+    font-size: 1rem;
+  }
+}

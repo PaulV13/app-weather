@@ -13,7 +13,6 @@ interface DaysType {
 }
 
 const useForm = () => {
-  const [citySearch, setCitySearch] = useState("");
   const [temp, setTemperature] = useState(0);
   const [tempMin, setTempMin] = useState(0);
   const [tempMax, setTempMax] = useState(0);
@@ -28,11 +27,6 @@ const useForm = () => {
   const [error, setError] = useState("");
   const [humidity, setHumidity] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [, setDisabled] = useState(true);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCitySearch(e.target.value)
-  }
 
   const handleSubmit = async (citySearch:string) => {
     setLoading(true);
@@ -44,7 +38,6 @@ const useForm = () => {
       setError(message);
       setTemperature(0);
       setWeatherIcon("");
-      setLoading(false);
     } else {
       setError("");
       setCity(name);
@@ -59,10 +52,8 @@ const useForm = () => {
       setHumidity(dataDaily.current.humidity);
       setDate(getDate(dataDaily.current.dt, dataDaily.timezone));
       setDays(getWeekendDays(dataDaily.daily));
-      setDisabled(true);
-      setLoading(false);
-      setCitySearch("");
     }
+    setLoading(false);
   };
 
   return {
@@ -71,7 +62,6 @@ const useForm = () => {
     tempMax,
     feelsLike,
     weatherIcon,
-    citySearch,
     city,
     country,
     sunsetHour,
@@ -82,7 +72,6 @@ const useForm = () => {
     humidity,
     loading,
     handleSubmit,
-    handleChange
   };
 };
 

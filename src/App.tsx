@@ -1,7 +1,8 @@
 import Form from "./components/Form/Form";
-import useBackground from "./hooks/useBackground";
 import useForm from "./hooks/useForm";
-
+import Weather from "./components/Weather/Weather";
+import ListWeather from "./components/ListWeather/ListWeather";
+import FooterWeather from "./components/FooterWeather/FooterWeather";
 //styles
 import "./styles/App.css";
 
@@ -10,6 +11,7 @@ import iconHumidity from "./assets/humidity.png";
 import iconSunrise from "./assets/sunrise.png";
 import iconSunset from "./assets/sunset.png";
 import loadingSvg from "./assets/loading.svg";
+
 
 function App() {
   const {
@@ -29,93 +31,26 @@ function App() {
     loading,
     handleSubmit,
   } = useForm()
-  const { backgroundClassName } = useBackground(weatherIcon);
 
   return (
     <div className="App">
       <div className="container">
         <Form onSubmit={handleSubmit} />
+        {error !== "" && <label className="error">
+          <h2>{error}</h2>
+        </label>}
         {loading ? (
           <div className="loading">
             <img src={loadingSvg} alt="" />
           </div>
-        ) : temp ? (
+        ) : temp !== 0 && (
           <>
-            <div className={`section-title background ${backgroundClassName}`}>
-              <div className="title">
-                <h2>
-                  {city}, {country}
-                </h2>
-                <h4>{currentDate}</h4>
-              </div>
-              <div className="temperature">
-                <div className="temp">
-                  <img
-                    className="temp-img"
-                    src={`https://openweathermap.org/img/w/${weatherIcon}.png`}
-                    alt=""
-                  />
-                  <p>{temp}°</p>
-                </div>
-                <div className="feels_like">
-                  <div className="tempMaxMin">
-                    <p className="tempMax">{tempMax}°</p>
-                    <span>/</span>
-                    <p className="tempMin">{tempMin}°</p>
-                  </div>
-                  <div className="description">
-                    <p>Feels like {feelsLike}°</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="sevenDays">
-              {days.map((daily, i) => {
-                const dailyMax = Math.round(daily.max);
-                const dailyMin = Math.round(daily.min);
-                return (
-                  <div className="sevenDays-item" key={i}>
-                    <div className="sevenDay-day">
-                      <span>{daily.day}</span>
-                    </div>
-                    <div className="sevenDay-img">
-                      <img
-                        className="icon-img"
-                        src={`https://openweathermap.org/img/w/${daily.icon}.png`}
-                        alt=""
-                      />
-                    </div>
-                    <div className="sevenDay-temp">
-                      <span>
-                        {dailyMax}° / {dailyMin}°
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="humidity-sunset-sunrise">
-              <div className="humidity-sunset-sunrise-item humidity">
-                <img className="icon-img" src={iconHumidity} alt="" />
-                <p>Humidity</p>
-                <span>{humidity}%</span>
-              </div>
-              <div className="humidity-sunset-sunrise-item sunrise">
-                <img className="icon-img" src={iconSunrise} alt="" />
-                <p>Sunrise</p>
-                <span>{sunriseHour}</span>
-              </div>
-              <div className="humidity-sunset-sunrise-item sunset">
-                <img className="icon-img" src={iconSunset} alt="" />
-                <p>Sunset</p>
-                <span>{sunsetHour}</span>
-              </div>
-            </div>
+            <Weather city={city} country={country} currentDate={currentDate}
+              temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} weatherIcon={weatherIcon} />
+            <ListWeather days={days} />
+            <FooterWeather humidity={humidity} iconHumidity={iconHumidity} sunriseHour={sunriseHour} iconSunrise={iconSunrise}
+              sunsetHour={sunsetHour} iconSunset={iconSunset} />
           </>
-        ) : (
-          <div className="error">
-            <h2>{error}</h2>
-          </div>
         )}
       </div>
     </div>
