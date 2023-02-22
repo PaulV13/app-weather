@@ -10,18 +10,18 @@
 }
 
 .form button {
-  background: #023e8a;
+  background: #061930;
   border-radius: 4px;
-  border: 2px solid #023e8a;
-  color: white;
+  border: none;
+  color: #eee;
   cursor: pointer;
   font-weight: 700;
-  padding: 6px;
+  padding: 8px;
   width: 80px;
 }
 
 .btn-submit:hover {
-  background: transparent;
+  background: #0b2b53;
 }
 
 .form button:disabled {

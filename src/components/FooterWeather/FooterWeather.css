@@ -1,6 +1,7 @@
 .footer-section {
   align-items: center;
-  background: #023E8A;
+  color: #eee;
+  background: #061930;
   border-radius: 6px;
   display: flex;
   justify-content: space-evenly;
@@ -15,14 +16,14 @@
 }
 
 .footer-section-item p {
-  color: rgb(247 247 247);
-  font-size: .875rem;
+  font-size: 0.85rem;
   margin: 0 8px 0 0;
 }
 
 .footer-section-item span {
-  color: #000;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 10px;
 }
 
 @media (max-width: 470px) {
@@ -31,23 +32,7 @@
   }
 
   .footer-section-item {
-    align-items: center;
     display: flex;
-    flex: 1;
     justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .footer-section-item p {
-    color: rgb(247 247 247);
-    flex: 0;
-    font-size: 14px;
-    margin: 0 5% 0 0;
-  }
-  
-  .footer-section-item span {
-    color: black;
-    flex: 0;
-    font-weight: 500;
   }
 }

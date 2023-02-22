@@ -4,7 +4,7 @@ import Weather from "./components/Weather/Weather";
 import ListWeather from "./components/ListWeather/ListWeather";
 import FooterWeather from "./components/FooterWeather/FooterWeather";
 //styles
-import "./styles/App.css";
+import "./App.css";
 
 //imageIcon
 import iconHumidity from "./assets/humidity.png";

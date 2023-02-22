@@ -14,17 +14,17 @@ function FooterWeather({ humidity, iconHumidity, sunriseHour, iconSunrise, sunse
     <div className="footer-section">
       <div className="footer-section-item humidity">
         <img className="icon-img" src={iconHumidity} alt="" />
-        <p>Humidity</p>
+        <p>Humidity:</p>
         <span>{humidity}%</span>
       </div>
       <div className="footer-section-item sunrise">
         <img className="icon-img" src={iconSunrise} alt="" />
-        <p>Sunrise</p>
+        <p>Sunrise:</p>
         <span>{sunriseHour}</span>
       </div>
       <div className="footer-section-item sunset">
         <img className="icon-img" src={iconSunset} alt="" />
-        <p>Sunset</p>
+        <p>Sunset:</p>
         <span>{sunsetHour}</span>
       </div>
     </div>
