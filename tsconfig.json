@@ -3,6 +3,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "target": "ESNext",
     "types": ["vite/client"],
-    "isolatedModules": true
+    "isolatedModules": true,
+    "moduleResolution": "NodeNext"
   }
 }
