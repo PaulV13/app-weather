@@ -4,6 +4,7 @@
     "target": "ESNext",
     "types": ["vite/client"],
     "isolatedModules": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx"
   }
 }
